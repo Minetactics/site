@@ -1,0 +1,8 @@
+#in-work-left h1{font:bold 2em  arial,sans-serif;color:blue;}
+#in-work-bottom p{color:dimgrey;font:italic 10px arial,sans-serif;}
+.action-btn,.second-btn{border:none;border-radius:0px; box-shadow:2px 2px 4px #808080;}
+.action-btn{background:dodgerblue;color:white;}
+.hidden{visibility:hidden;}
+.second-btn{background:white;color:dodgerblue;}
+#menu a{text-decoration: none;color: white;font:bold 1em arial,sans-serif;}
+#menu li:hover{background:#75a0f0;}

@@ -1,0 +1,12 @@
+body{background:#f1f1f1;margin:0px;}
+#in-work{box-sizing:border-box;margin:25px;flex-direction:column;display:block;}
+div.main{width:auto;padding:10px;display:flex;display:-webkit-flex;}
+div.main div{-webkit-flex:1;-ms-flex:1;flex:1;}
+#in-work-left, #in-work-right{}
+#in-work-top{}
+#menu{margin:0;background:cornflowerblue;}
+#menu ul{margin-top:0px; align-content:center;display:flex;display:-webkit-flex;width:auto;list-style-type: none;}
+#menu li{-webkit-flex=1;-ms-flex:1;flex:1;padding:10px;}
+p.loginlabel{display:inline;}
+#in-work-left{}
+#in-work-right{}
