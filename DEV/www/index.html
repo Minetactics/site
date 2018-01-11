@@ -1,106 +1,31 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage of Joseph Sallembien</title>
-    <meta description="The page that best describes Joseph Sallembien: from CVs to projects.">
-    <link rel="stylesheet" type="text/css" href="./styles/structure.css">
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
-</head>
-<body>
-    <div id="menu">
-        <ul>
-            <li onclick="location.href='index.html'"><span><a href="index.html">Home</a></span></li>
-            <li onclick="location.href='pages/projects.html'"><span><a href="pages/projects.html">Projects</a></span></li>
-            <li onclick="location.href='pages/docs.html'"><span><a href="pages/docs.html">Documents</a></span></li>
-            <li onclick="location.href='pages/contact.html'"><span><a href="pages/contact.html">Contact me</a></span></li>
-        </ul>
-    </div>
-    <div id="in-work">
-        <div id="in-work-top" class="main">
-        </div>
-        <div id="in-work-mid" class="main">
-            <div id="in-work-left">
-                <span><h1>This site is under construction</h1></span>
-                <div id="signup_form">
-                <span><p>Sign up here</p></span><br>
-                <!--<span>Name: <input type="text" id="name"></span><br>-->
-                <span><p class="loginlabel">Email: </p><input type="email" id="mailID" required></span><br>
-                <span><p class="loginlabel">Password: </p><input type="password" id="passwd" required></span><br>
-                <span><button id="btnLogin" class="action-btn">Log in</button></span>
-                <span><button id="btnSignUp" class="second-btn">Sign up</button></span>
-                <span><button id="btnLogout" class="action-btn hidden">Logout</button></span>
-                </div>
-            </div>
-            <div id="in-work-right">
-            </div>
-        </div>
-        <div id="in-work-bott" class="main">
-            <span><p>Please don't bot spam (it won't go through anyways...)</p></span>
-        </div>
-    </div>
+<!-- Pleace this snippet right after opening the head tag to make it work properly -->
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBUPcnD4PtzffIGrKXKn5vLEVe3KWV8yQU",
-            authDomain: "sallembiensite.firebaseapp.com",
-            databaseURL: "https://sallembiensite.firebaseio.com",
-            projectId: "sallembiensite",
-            storageBucket: "sallembiensite.appspot.com",
-            messagingSenderId: "111175740216"
-        };
-        firebase.initializeApp(config);       
-        //var bigOne = document.getElementById("bigOne");
-        //var dbRef = firebase.database().ref().child("text");
-        //dbRef.on('value', snap => bigOne.innerText = snap.val());      
-        //const txtName = document.getElementById("name");
-        const txtEmail = document.getElementById("mailID");
-        const txtPasswd = document.getElementById("passwd");
-        const btnLogin = document.getElementById("btnLogin");
-        const btnSignUp = document.getElementById("btnSignUp");
-        const btnLogout = document.getElementById("btnLogout");  
-        //Listener for login
-        btnLogin.addEventListener('click', e =>{
-            //Get values
-            const email = txtEmail.value;
-            const passwd = txtPasswd.value;
-            const auth = firebase.auth();
-            //Login
-            const promise = auth.signInWithEmailAndPassword(email,passwd);
-            promise.catch(e => console.log(e.message));  
-        }); 
-        //Listener for signup
-        btnSignUp.addEventListener('click', e =>{
-            //Get values
-            const mail = txtEmail.value;
-            const paswd = txtPasswd.value;
-            const auth = firebase.auth();
-            //Signup
-            const promise = auth.createUserWithEmailAndPassword(mail,paswd);
-            promise.catch(e => console.log(e.message));
-        });
-        //Listener for logout
-        btnLogout.addEventListener('click', e=>{
-            //Get values 
-            const mail = txtEmail.value;
-            const paswd = txtPasswd.value;
-            const auth = firebase.auth();
-            //Listener for logout
-            firebase.auth().signOut();
-        });
-        //Realtime listener
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if(firebaseUser){
-                console.log(firebaseUser);
-                btnLogout.classList.remove("hidden");
-                btnLogin.classList.add("hidden");
-            }else{
-                console.log("You are not logged in!");
-                btnLogout.classList.add("hidden");
-                btnLogin.classList.remove("hidden");
-            }
-        });
-    </script>
-</body>
+<!-- This code is licensed under GNU GPL v3 -->
+<!-- You are allowed to freely copy, distribute and use this code, but removing author credit is strictly prohibited -->
+<!-- Generated by http://insider.zone/tools/client-side-url-redirect-generator/ -->
+
+<!-- REDIRECTING STARTS -->
+<link rel="canonical" href="http://sallembien.com/pages/index.html"/>
+<noscript>
+	<meta http-equiv="refresh" content="0;URL=http://sallembien.com/pages/index.html">
+</noscript>
+<!--[if lt IE 9]><script type="text/javascript">var IE_fix=true;</script><![endif]-->
+<script type="text/javascript">
+	var url = "http://sallembien.com/pages/index.html";
+	if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
+	{
+		document.write("redirecting..."); // Don't remove this line or appendChild() will fail because it is called before document.onload to make the redirect as fast as possible. Nobody will see this text, it is only a tech fix.
+		var referLink = document.createElement("a");
+		referLink.href = url;
+		document.body.appendChild(referLink);
+		referLink.click();
+	}
+	else { window.location.replace(url); } // All other browsers
+</script>
+<!-- Credit goes to http://insider.zone/ -->
+<!-- REDIRECTING ENDS -->
+    </head>
+    <body> <p> Si la redirection n'a pas lieu, cliquez ici :</p><a href="/pages/index.html">Accueil</a></body>
 </html>
