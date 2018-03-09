@@ -14,9 +14,20 @@ Les tables sont fournies ci-dessous pour la reprise du projet:
 
 ### Table utilisateur
 
+| ID | Nom | Prénom | Age |
+|----|-----|--------|-----|
+|varchar|varchar|varchar|int|
+
 ### Table documents
 
+| ID | Langue | Type | Titre | urlPartiel | accessible |
+|----|--------|------|-------|------------|------------|
+|varchar|varchar|varchar|varchar|varchar|boolean|
+
 ### Table projets
+| ID | Langue | Titre | Description | url | accessible |
+|----|--------|-------|-------------|-----|------------|
+|varchar|varchar|varchar|text|varchar|boolean|
 
 ## Dépendences
 Les dépendences Maven utilisées sont les suivantes:
